@@ -1,0 +1,667 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Green Innovation: an empirical analysis of technology, skills and policy</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/sky.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    
+    <!-- Own style -->
+    <style>
+      .reveal section img {
+        background:none; 
+        border:none; 
+        box-shadow:none;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Green Innovation</h2>
+          <h3>an empirical analysis of technology, skills and policy</h3>
+          <p>François Perruchas<br/>
+          PhD tutors: Davide Consoli, Nicolò Barbieri</p>
+          <div align="center">
+            <img src="./pictures/logos/ingenio.svg" height="80em">
+            <img src="./pictures/logos/upv.svg" height="80em">
+          </div>
+        </section>
+        <section>
+          <h4>Introduction</h4>
+          <p style="text-align:left;">Paris Agreement: hold the increase in global average temp. below 2ºC</p>
+          <p style="text-align:left;"><b>&#10551; achieving net zero emissions of greenhouse gases by the second half of this century</b></p>
+          <ul>
+            <li>Need of a radical change in technologies</li>
+            <li>How are green technologies evolving? Are they mature?</li>
+            <li>Who produce them? which knowledge, skills are they associated with?</li>
+          </ul>
+        </section>
+        <section>
+          <h4>Research questions</h4>
+          <ul>
+            <li>What are the green technologies?</li>
+            <li>Where are they produced?</li>
+            <li>Which are the countries' characteristics associated with the diversification/specialisation in green technologies?</li>
+            <li>Are all the GT in the same development stage?</li>
+            <li>What type of skills / knowledge is associated with GT production?</li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <p>
+              <h4>Building a dataset on Green Technologies</h4>
+            <ol>
+              <li>Using patent data - PATSTAT 2016a</li>
+              <li>Identification with ENV-TECH (OECD, 2016)
+                <ul>
+                  <li>8 families: Environmental Management, Climate Change Adaptation &amp; Mitigation</li>
+                  <li>36 technologies at 2 digit level</li>
+                  <li>94 technologies at 3 digit level</li>
+                </ul>
+              </li>
+              <li>Geolocalisation of inventors at city level</li>
+            </ol>
+            </p>
+          </section>
+          <section>
+            <h4>Evolution of Green Technologies [1970 - 2012]</h4>
+            <div align="center">
+              <img src="./pictures/graphs/greentech_evol.png" height="570em">
+            </div>
+          </section>
+          <section>
+            <h4>Number of Patent families in green tech [1970 - 2012]</h4>
+            <div align="center">
+              <img src="./pictures/maps/worldwide.png">
+            </div>
+            <!--<p style="font-size:0.6em;">90% of green patent families are produced by 8 countries.</p>-->
+          </section>
+        </section>
+        <section>
+          <section>
+            <h4>Overview of Green Technologies</h4>
+            <ul>
+              <li>Which countries are leaders / laggards / catching-up in the production of GT ?</li>
+              <li>Differences between green technologies</li>
+              <li>using Economic Fitness-Complexity (EFC) approach</li>
+            </ul>
+          </section>
+          <!--
+          <section>
+            <h4>EFC methodology</h4>
+            <ul>
+              <li>input: tech. / countries matrix</li>
+            <div align="center">
+              <img src="./pictures/graphs/example_matrix.png" height="300em">
+            </div>
+            <li>output: fitness ranking for:
+              <ul>
+                <li>green technologies</li>
+                <li>countries</li>
+              </ul>
+            </li>
+            </ul>
+          </section>
+          -->
+          <section>
+            <h4>green fitness ranking of 36 technologies</h4>
+            <div align="center">
+              <img src="./pictures/graphs/envtechRanking-146_X_36.png" height="500em">
+            </div>
+          </section>
+          <section>
+            <h4>green fitness ranking of 61 active countries</h4>
+            <div align="center">
+              <img src="./pictures/graphs/countryFitnessRanking_3-digits_10-year.png" height="500em">
+            </div>
+          </section>
+          <section>
+            <h4>Relation between green fitness - GDP - export fitness</h4>
+            <div align="center">
+              <img src="./pictures/graphs/ExportF_GDPpc_GreenF_cmapNEW.png" height="500em">
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h4>Countries diversification and specialisation in GT</h4>
+            <ul>
+              <li>Countries' portfolios of GT is very heteregoneous</li>
+              <li>Developed countries are main producer, but not only</li>
+              <li>Some developed countries only produce a few GT</li>
+              <li>Which are the countries' characteristics to be involved in GT production?</li>
+            </ul>
+          </section>
+          <section style="">
+            <h4>Research design</h4>
+            <p style="text-align:left;font-size:0.7em;">
+              We estimate the probability of <br/>
+              &#8674; diversification in a GT<br/>
+              <img src="./pictures/equations/diversification.png"><br/>
+              &#8674; specialization in a GT<br/>
+              <img src="./pictures/equations/specialization.png"><br/>
+              with: <br/>
+              - S<sub>cjt</sub>: 1 if RTA > 1<br/>
+              - ITC: complexity of a technology (Hidalgo, 2007)<br/>
+              - Density: how close is a tech. to country's GT portfolio<br/>
+              - HI: Herfindhal Index<br/>
+              - Size: size of the technology<br/>
+              
+            </p>
+          </section>
+          <section>
+            <h4>Regression results</h4>
+            <table class="data-table" style="font-size:0.38em;">
+                <tr>
+                    <th class="border-top"></th>
+                    <th class="border-top align-center">Div. Eq. (1)</th>
+                    <th class="border-top align-center">Div. Eq. (2)</th>
+                    <th class="border-top align-center">Spec. Eq.</th>
+                </tr>
+                <tr>
+                    <td>Density</td>
+                    <td class="align-center">0.027***</td>
+                    <td class="align-center">0.116***</td>
+                    <td class="align-center">0.141***</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="align-center">(0.01)</td>
+                    <td class="align-center">(0.01)</td>
+                    <td class="align-center">(0.01)</td>
+                </tr>
+                <tr>
+                    <td>Density * GDP</td>
+                    <td class="align-center">0.000*</td>
+                    <td class="align-center">0.000</td>
+                    <td class="align-center"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="align-center">(0.00)</td>
+                    <td class="align-center">(0.00)</td>
+                    <td class="align-center"></td>
+                </tr>
+                <tr>
+                    <td>Tech-Level Variables</td>
+                    <td class="align-center"></td>
+                    <td class="align-center"></td>
+                    <td class="align-center"></td>
+                </tr>
+                <tr>
+                    <td>Log Size</td>
+                    <td class="align-center">0.005*</td>
+                    <td class="align-center">0.007**</td>
+                    <td class="align-center">0.010***</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="align-center">(0.00)</td>
+                    <td class="align-center">(0.00)</td>
+                    <td class="align-center">(0.00)</td>
+                </tr>
+                <tr>
+                    <td>Herfindahl Index</td>
+                    <td class="align-center">-0.019**</td>
+                    <td class="align-center">-0.050***</td>
+                    <td class="align-center">0.010</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="align-center">(0.01)</td>
+                    <td class="align-center">(0.01)</td>
+                    <td class="align-center">(0.01)</td>
+                </tr>
+                <tr>
+                    <td>ITC</td>
+                    <td class="align-center">0.002**</td>
+                    <td class="align-center">0.004***</td>
+                    <td class="align-center">0.002**</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="align-center">(0.00)</td>
+                    <td class="align-center">(0.00)</td>
+                    <td class="align-center">(0.00)</td>
+                </tr>
+                <tr>
+                    <td>GDP x Log Size</td>
+                    <td class="align-center"></td>
+                    <td class="align-center"></td>
+                    <td class="align-center">-0.000</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="align-center"></td>
+                    <td class="align-center"></td>
+                    <td class="align-center">(0.00)</td>
+                </tr>
+                <tr>
+                    <td>GDP x Herfindahl Index</td>
+                    <td class="align-center"></td>
+                    <td class="align-center"></td>
+                    <td class="align-center">-0.000***</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="align-center"></td>
+                    <td class="align-center"></td>
+                    <td class="align-center">(0.00)</td>
+                </tr>
+                <tr>
+                    <td>GDP x ITC</td>
+                    <td class="align-center"></td>
+                    <td class="align-center"></td>
+                    <td class="align-center">0.000***</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="align-center"></td>
+                    <td class="align-center"></td>
+                    <td class="align-center">(0.00)</td>
+                </tr>
+                <tr>
+                    <td>Tech Fixed Effects</td>
+                    <td class="align-center">Yes</td>
+                    <td class="align-center">Yes</td>
+                    <td class="align-center">Yes</td>
+                </tr>
+                <tr>
+                    <td>Time Fixed Effects</td>
+                    <td class="align-center">Yes</td>
+                    <td class="align-center">Yes</td>
+                    <td class="align-center">Yes</td>
+                </tr>
+                <tr>
+                    <td>Country Fixed Effects</td>
+                    <td class="align-center">Yes</td>
+                    <td class="align-center">Yes</td>
+                    <td class="align-center">Yes</td>
+                </tr>
+                <tr>
+                    <td class="border-bottom">Obs.</td>
+                    <td class="align-center">51149</td>
+                    <td class="align-center">70547</td>
+                    <td class="align-center">77065</td>
+                </tr>
+                <tr>
+                    <td colspan="4">(1) RTA &lt; 0.1 in the prev. period. (2) RTA &lt; at the beg. of the sample.</td>
+                </tr>
+            </table>
+          </section>
+          <section>
+            <h4>Countries characteristics</h4>
+            <p>Diversification probabilities</p>
+            <div width="50%">
+              <img src="./pictures/graphs/diversification.png">
+            </div>
+          </section>
+          <section>
+            <h4>Countries characteristics</h4>
+            <p>Specialization probabilities</p>
+            <div width="50%">
+              <img src="./pictures/graphs/specialization.png">
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h4>Characterization of a technology life cycle</h4>
+            <p style="text-align:left;">4 stages defined by Vona & Consoli (2015):<br />
+              <ul>
+                <li><b>Emergence</b>: exploration, experimentation, competition between different
+                designs, highly localised</li>
+                <li><b>Development</b>: standardisation of design, shake out of inferior variants,
+                some diffusion</li>
+                <li><b>Diffusion</b>: stabilisation of design, wider geographical diffusion</li>
+                <li><b>Maturity</b>: dominant design, high standardisation, widest geographical
+                diffusion</li>
+              </ul>
+            </p>
+          </section>
+          <section>
+            <h4>Characterization of a technology life cycle</h4>
+            <p align="left">Identification of TLC stages: proposed approach</p>
+            <ul>
+              <li><b>Ubiquity</b> of GT -> Country specialisation / Tech. diffusion</li>
+              <li><b>Patenting intensity</b> -> Efforts in developing GT</li>
+            </ul>
+            <p>&nbsp;</p>
+            <table class="tg" style="border-size:0px;">
+              <tr>
+                <th class="tg-73oq"></th>
+                <th class="tg-wp8o" colspan="3" style="text-align:center;vertical-align:center;font-style:italic;font-weight:normal;">Ubiquity</th>
+              </tr>
+              <tr>
+                <td class="tg-qtf5" rowspan="3" style="text-align:center;vertical-align:center;font-style:italic;">Patenting activity</td>
+                <td class="tg-73oq"></td>
+                <td class="tg-sx07">low</td>
+                <td class="tg-sx07">high</td>
+              </tr>
+              <tr>
+                <td class="tg-lmxn">high</td>
+                <td class="tg-wp8o"><span style="font-weight:bold">Development</span></td>
+                <td class="tg-mqa1"><span style="font-weight:bold">Diffusion</span></td>
+              </tr>
+              <tr>
+                <td class="tg-lmxn">low</td>
+                <td class="tg-mqa1"><span style="font-weight:bold">Emergence</span></td>
+                <td class="tg-mqa1"><span style="font-weight:bold">Maturity</span></td>
+              </tr>
+            </table>
+          </section>
+          <section>
+            <h4>Characterization of a technology life cycle</h4>
+            <div  style="text-align:left;">
+              <p style="text-align:left;"><b>Ubiquity</b><br/>
+                RTA for each GT(<i>j</i>) / country (<i>c</i>) / time(<i>t</i>) period<br />
+                <p style="text-align:left;"><i>The indicator for each GT is given by the number of countries that
+exhibit RTA in a particular GT (Petralia et al., 2017; Balland &amp;Rigby, 2017):</i>
+              </p>
+                <p style="text-align:center";><i>UBIQUITY<sub>j,t</sub> = &Sigma;<sub>c</sub> M<sub>c,j</sub></i> with <i>M<sub>c,j</sub> = 1</i> if <i>RTA > 1</i>
+              </p>
+              </p>
+              <p style="text-align:left;">
+              <b>Patenting intensity</b>
+              <ul>
+                <li>Number of patent families per GT</li>
+              </ul>
+              </p>
+              <p>&nbsp;</p>
+            </div>
+          </section>
+          <section>
+            <h4>Example of some green technologies - evolution</h4>
+            <div align="center">
+              <img src="./pictures/graphs/TLC_example.png" height="500em">
+            </div>
+          </section>
+          <section>
+            <h4>Example of some green technologies - TLC stages</h4>
+            <div align="center">
+              <img src="./pictures/graphs/TLC_example2.png" height="500em">
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h4>Knowledge and skills associated with GT</h4>
+            <ul>
+              <li>GT require different competences that are far form traditional knowledge bases of industries (De
+              Marchi, 2012; Ghisetti et al. 2015)</li>
+              <li>GT are more complex, radical, pervasive and impactful than non-GT (Barbieri et al. 2018)</li>
+              <br />
+              <li>Which <b>knowledge structures</b> are associated with GT growth?</li>
+              <li>Is this association stable over the green <b>technology life cycle</b>?</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Knowledge structures: Related - Unrelated variety</h4>
+            <ul>
+              <li>Innovation: accumulation and recombination</li>
+              <li>Location matters: innovation needs interaction, proximity and diversity of competences</li>
+              <br />
+              <li>two kinds of diversity:</li>
+              <ul>
+                <li>within-industry: <b>Related Variety (RV)</b></li>
+                <li>between-industry: <b>Unrelated Variety (UV)</b></li>
+              </ul>
+              <br />
+              <li>complementary of UV &amp; RV (Castaldi, 2015):</li>
+              <ul>
+                <li>UV more associated with <u>Radical Innovation</u></li>
+                <li>RV more assoc. with <u>Incremental Innovation</u></li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h4>Measuring variety with Entropy</h4>
+            <p style="text-align:left;">
+              We measure variety with the territory knowledge base using patent families and IPC codes (Castaldi, 2015).
+              <br />
+              UV &#8658; recombination of IPC 1 digit (ex: C)<br />
+              SRV &#8658; recombination of IPC 4 digits (ex: C01B)<br />
+              RV &#8658; recombination of IPC 8 digits (ex: C01B 6/10)<br />
+            </p>
+          </section>
+          <section style="font-size:0.7em;">
+            <h4>Evidences from US federal states</h4>
+            <p style="text-align:left;">Our conjecture:</p>
+            <ul>
+              <li>green technologies &#8800; other technologies</li>
+              <li>tech. in early stage &#8658; UV, maturity stage &#8658; RV</li>
+            </ul>
+            <p style="text-align:left;">
+              Empirical model:<br />
+              <img src="./pictures/equations/related_variety.png"><br/>
+              Where: <br/>
+              - GP: N. of green patent families per millions inhabitants in US states over year<br>
+              - Variety: UV, SRV and RV<br>
+              - R&amp;D: R&amp;D expenditure<br>
+              - HC: % of people with bachelor degree or higher<br>
+              - Controls (HC and R&amp; in neighbour states, Pop. density)<br>
+              - &Tau;<sub>j</sub>: state fixed effects<br>
+              - &delta;<sub>jt</sub>: time fixed effects
+            </p>
+          </section>
+          <section style="font-size:0.7em;">
+            <h4>Preliminary results</h4>
+            <table class="data-table">
+                <tr>
+                    <th class="border-top border-bottom"></th>
+                    <th class="border-top border-bottom align-center">GP (log)</th>
+                    <th class="border-top border-bottom align-center">Tot Pat (log)</th>
+                </tr>
+                <tr>
+                    <td>UV (log)</td>
+                    <td class="align-center">1.386***</td>
+                    <td class="align-center">-0.931*</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="align-center">(0.421)</td>
+                    <td class="align-center">(0.507)</td>
+                </tr>
+                <tr>
+                    <td>SRV (log)</td>
+                    <td class="align-center">0.286</td>
+                    <td class="align-center">0.193***</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="align-center">(0.184)</td>
+                    <td class="align-center">(0.0668)</td>
+                </tr>
+                <tr>
+                    <td>RV (log)</td>
+                    <td class="align-center">0.392**</td>
+                    <td class="align-center">0.515***</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="align-center">(0.154)</td>
+                    <td class="align-center">(0.0987)</td>
+                </tr>
+                <tr>
+                    <td>Controls</td>
+                    <td class="align-center">YES</td>
+                    <td class="align-center">YES</td>
+                </tr>
+                <tr>
+                    <td>State FE</td>
+                    <td class="align-center">YES</td>
+                    <td class="align-center">YES</td>
+                </tr>
+                <tr>
+                    <td>Time Dummies</td>
+                    <td class="align-center">YES</td>
+                    <td class="align-center">YES</td>
+                </tr>
+                <tr>
+                    <td>Random growth</td>
+                    <td class="align-center">YES</td>
+                    <td class="align-center">YES</td>
+                </tr>
+                <tr>
+                    <td class="border-bottom">Obs.</td>
+                    <td class="align-center">1466</td>
+                    <td class="align-center">1470</td>
+                </tr>
+            </table>
+          </section>
+          <section style="font-size:0.6em;">
+            <h4>Preliminary results</h4>
+            <table class="data-table">
+                <tr>
+                    <th class="border-top border-bottom"></th>
+                    <th class="border-top border-bottom">GP (log)</th>
+                    <th class="border-top border-bottom">Emergence</th>
+                    <th class="border-top border-bottom">Development</th>
+                    <th class="border-top border-bottom">Diffusion</th>
+                    <th class="border-top border-bottom">Maturity</th>
+                </tr>
+                <tr>
+                    <td>UV (log)</td>
+                    <td>1.386***</td>
+                    <td>0.958*</td>
+                    <td>1.214**</td>
+                    <td>0.597</td>
+                    <td>0.716</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>(0.421)</td>
+                    <td>(0.523)</td>
+                    <td>(0.590)</td>
+                    <td>(0.786)</td>
+                    <td>(0.473)</td>
+                </tr>
+                <tr>
+                    <td>SRV (log)</td>
+                    <td>0.286</td>
+                    <td>-0.356</td>
+                    <td>0.783***</td>
+                    <td>0.166</td>
+                    <td>-0.205</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>(0.184)</td>
+                    <td>(0.338)</td>
+                    <td>(0.201)</td>
+                    <td>(0.249)</td>
+                    <td>(0.147)</td>
+                </tr>
+                <tr>
+                    <td>RV (log)</td>
+                    <td>0.392**</td>
+                    <td>0.421</td>
+                    <td>0.516***</td>
+                    <td>0.434*</td>
+                    <td>0.554***</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>(0.154)</td>
+                    <td>(0.313)</td>
+                    <td>(0.157)</td>
+                    <td>(0.247)</td>
+                    <td>(0.0848)</td>
+                </tr>
+                <tr>
+                    <td>Controls</td>
+                    <td>YES</td>
+                    <td>YES</td>
+                    <td>YES</td>
+                    <td>YES</td>
+                    <td>YES</td>
+                </tr>
+                <tr>
+                    <td>State FE</td>
+                    <td>YES</td>
+                    <td>YES</td>
+                    <td>YES</td>
+                    <td>YES</td>
+                    <td>YES</td>
+                </tr>
+                <tr>
+                    <td>Time Dummies</td>
+                    <td>YES</td>
+                    <td>YES</td>
+                    <td>YES</td>
+                    <td>YES</td>
+                    <td>YES</td>
+                </tr>
+                <tr>
+                    <td>Random growth</td>
+                    <td>YES</td>
+                    <td>YES</td>
+                    <td>YES</td>
+                    <td>YES</td>
+                    <td>YES</td>
+                </tr>
+                <tr>
+                    <td class="border-bottom">Obs.</td>
+                    <td>1466</td>
+                    <td>1392</td>
+                    <td>1371</td>
+                    <td>1424</td>
+                    <td>1452</td>
+                </tr>
+            </table>            
+          </section>
+        </section>
+        <section>
+          <h4>Conclusions</h4>
+          <ul style="font-size:0.8em;">
+            <li>Prominent part of asian countries in GT production</li>
+            <li>GDP is not a barrier to step into the ring</li>
+            <li>Green Technologies are more associated with UV than other technologies</li>
+            <li>Emerging GT are associated with UV, mature GT with RV</li>
+          </ul>
+          <p style="text-align:left;">Therefore</p>
+          <ul style="font-size:0.8em;">
+            <li>Specialisation trap: timing of investing in GT in the life cycle</li>
+            <li>Opportunity to develop green technologies according to local production structure</li>
+            <li>"Recombination" skills will be needed to develop GT</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
