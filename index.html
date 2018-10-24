@@ -698,7 +698,10 @@ exhibit RTA in a particular GT (Petralia et al., 2017; Balland &amp;Rigby, 2017)
           { src: 'plugin/markdown/markdown.js' },
           { src: 'plugin/notes/notes.js', async: true },
           { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-        ]
+        ],
+        keyboard: {
+          190: 'down' // go down when . is pressed
+        }
       });
     </script>
   </body>
